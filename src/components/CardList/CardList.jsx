@@ -48,7 +48,7 @@ function CardList() {
 
   return (
     <div className="game-list">
-      <h2>Available Giveaways - {getCurrentMonthYear()}</h2>
+      <h2 className='game-list-title'>Available Giveaways - {getCurrentMonthYear()}</h2>
       <div className="card-container">
         {games.map((game) => (
           <Card key={game.id} data={game}></Card>

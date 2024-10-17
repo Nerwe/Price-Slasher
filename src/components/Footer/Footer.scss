@@ -1,0 +1,29 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 1rem;
+    background-color: #2A2B2F;
+}
+
+.footer-links li {
+    line-height: 2rem;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.logo-container {
+    align-items: center;
+    display: flex;
+    width: auto;
+}
+
+.logo-container img {
+    width: 5rem;
+}
+
+.footer-text {
+    background-color: #111;
+}
