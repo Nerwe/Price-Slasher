@@ -1,67 +1,124 @@
-.game-card{
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: #333;
-    width: 50vmin;
-    gap: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.game-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #333;
+  width: 50vmin;
+  gap: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    &:hover{
-        transform: scale(1.05);
-        box-shadow: 3px 12px 5px rgba(0,0,0,0.3);
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 12px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .card-rare {
+    background-color: #4caf50;
+    text-align: left;
+    padding: 5px;
+    margin-top: -5px;
+    font-size: calc(5px + 1vmin);
+
+    &.uncommon {
+      background-color: #4d974d;
     }
 
-    .card-image{
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
+    &.rare {
+      background-color: #306ba6;
     }
 
-    .card-rare{
-        background-color: #4caf50;
-        text-align: left;
-        padding: 5px;
-        margin-top: -5px;
+    &.epic {
+      background-color: #571dae;
     }
 
-    .card-about-container{
-        padding: 10px;
-
-        .card-title{
-            font-size: calc(10px + 2vmin);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-align: left;
-        }
-
-        .card-description{
-            text-align: left;
-            color: grey;
-            font-size: calc(5px + 2vmin);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .card-claim-button{
-            display: inline-block;
-            font-size: 2vmin;
-            padding: 1vmin 2vmin;
-            color: #4caf50;
-            border: 1px solid #4caf50;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            width: 10vmin;
-
-            &:hover{
-                background-color: #4caf50;
-                color: white;
-            }
-        }
+    &.legendary {
+      background-color: #f89406;
     }
+  }
+
+  .card-about-container {
+    padding: 10px;
+
+    .card-title {
+      font-size: calc(10px + 2vmin);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+
+    .card-description {
+      text-align: left;
+      color: grey;
+      font-size: calc(5px + 2vmin);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-claim-button {
+      display: inline-block;
+      font-size: 2vmin;
+      padding: 1vmin 2vmin;
+      color: #4caf50;
+      border: 1px solid #4caf50;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 10vmin;
+
+      &:hover {
+        background-color: #62C462;
+        color: white;
+
+        &.uncommon {
+            background-color: #62C462;
+            color: white;
+          }
+      
+          &.rare {
+            background-color: #4799EB;
+            color: white;
+          }
+      
+          &.epic {
+            background-color: #772CE8;
+            color: white;
+          }
+      
+          &.legendary {
+            background-color: #f89406;
+            color: white;
+          }
+      }
+
+      &.uncommon {
+        border-color: #62C462;
+        color: #62C462;
+      }
+  
+      &.rare {
+        border-color: #4799EB;
+        color: #4799EB;
+      }
+  
+      &.epic {
+        border-color: #772CE8;
+        color: #772CE8;
+      }
+  
+      &.legendary {
+        border-color: #f89406;
+        color: #f89406;
+      }
+    }
+  }
 }
