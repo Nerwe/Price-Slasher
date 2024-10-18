@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import Card from '../Card/Card'
 import Pagination from '../Pagination/Pagination';
+import Loading from '../Loading/Loading';
+import Error from '../Error/Error';
 import './CardList.scss'
 
-function CardList() {
+const CardList = ({ platform }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemPerPage = 9;
-  const { data, loading, error } = useFetch('https://gamerpower.p.rapidapi.com/api/giveaways');
+  const itemPerPage = 12;
+
+  const url = platform
+    ? `https://gamerpower.p.rapidapi.com/api/giveaways?platform=${platform}`
+    : `https://gamerpower.p.rapidapi.com/api/giveaways`;
+  const { data, loading, error } = useFetch(url);
+  
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [platform]);
+
   const totalPages = Math.ceil(data.length / itemPerPage);
   const displayedItems = data.slice((currentPage - 1) * itemPerPage, currentPage * itemPerPage);
 
@@ -17,8 +28,8 @@ function CardList() {
     return now.toLocaleDateString("en-US", options);
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Loading/>;
+  if (error) return <Error error={error}/>;
 
   return (
     <div className="game-list">

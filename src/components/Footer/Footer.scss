@@ -3,27 +3,36 @@
     justify-content: center;
     gap: 10rem;
     margin-top: 1rem;
-    background-color: #2A2B2F;
+    background-color: #2a2b2f;
 }
 
 .footer-links li {
     line-height: 2rem;
-}
+    text-align: left;
 
-.footer-links a {
-    color: white;
+    a {
+        color: white;
+    }
 }
 
 .logo-container {
     align-items: center;
     display: flex;
     width: auto;
-}
 
-.logo-container img {
-    width: 5rem;
+    img {
+        width: 5rem;
+    }
 }
 
 .footer-text {
     background-color: #111;
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: grey;
+    }
 }
