@@ -28,7 +28,7 @@ const Card = ({ data }) => {
       <div className="card-about-container">
         <h3 className="card-title">{data.title}</h3>
         <p className="card-description">{data.description}</p>
-        <Link to="/game-details" state={{ data: data.id }} className={`card-claim-button ${rarity.toLowerCase()}`}>Claim</Link>
+        <Link to={`/game-details/${data.id}`} className={`card-claim-button ${rarity.toLowerCase()}`}>Claim</Link>
       </div>
     </div>
   )

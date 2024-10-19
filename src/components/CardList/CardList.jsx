@@ -5,8 +5,11 @@ import Pagination from '../Pagination/Pagination';
 import Loading from '../Loading/Loading';
 import Error from '../Error/Error';
 import './CardList.scss'
+import { useParams } from 'react-router-dom';
 
-const CardList = ({ platform }) => {
+const CardList = () => {
+  const { platform } = useParams();
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemPerPage = 12;
 

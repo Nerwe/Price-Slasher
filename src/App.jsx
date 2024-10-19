@@ -10,7 +10,8 @@ function App() {
         <Route path="/" element={<Navigate to="/giveaways" />} />
         <Route path="/giveaways" element={<Home />} />
         <Route path="/giveaways/:platform" element={<Home />} />
-        <Route path="game-details" element={<GameDetails />} />
+        <Route path="/game-details/:id" element={<GameDetails />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   )
