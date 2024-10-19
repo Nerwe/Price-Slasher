@@ -4,6 +4,8 @@ import Loading from '../Loading/Loading';
 import Error from '../Error/Error';
 import useFetch from '../../hooks/useFetch';
 import './GameData.scss';
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
 
 const GameData = () => {
   const { id } = useParams();
@@ -19,6 +21,7 @@ const GameData = () => {
 
   return (
     <div className="game-data">
+      <Navbar></Navbar>
       <div className="game-container">
         <div className="game-header">
           <div>
@@ -45,6 +48,7 @@ const GameData = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   )
 }

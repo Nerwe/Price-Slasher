@@ -20,14 +20,13 @@ const Navbar = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/contact">Contacts</Link>
+          <Link to="https://nullyarcv.vercel.app/">Contacts</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-right">
-        <Link to="/search" className="user-icon">Search</Link>
         <Link to="/login" className="user-icon">Log In</Link>
-        <Link to="/register" className="user-icon">Sign Up</Link>
+        <Link to="/signup" className="user-icon">Sign Up</Link>
       </div>
     </nav>
   );
