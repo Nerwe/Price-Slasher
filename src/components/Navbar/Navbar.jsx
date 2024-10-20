@@ -3,6 +3,8 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const isLoggedIn = localStorage.getItem("email") && localStorage.getItem("username") && localStorage.getItem("password");
+  
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -25,8 +27,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-right">
-        <Link to="/login" className="user-icon">Log In</Link>
-        <Link to="/signup" className="user-icon">Sign Up</Link>
+        {isLoggedIn ? (
+          <Link to="/profile" className="user-icon">Profile</Link>
+        ) : (
+          <>
+            <Link to="/login" className="user-icon">Log In</Link>
+            <Link to="/signup" className="user-icon">Sign Up</Link>
+          </>
+        )}
       </div>
     </nav>
   );
