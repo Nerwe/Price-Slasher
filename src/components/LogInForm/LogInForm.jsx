@@ -59,7 +59,7 @@ const LogInForm = () => {
       </form>
       <div className="form-footer">
         <span className="text">Don't have an account? </span>
-        <Link to="/login" className="text-link">
+        <Link to="/signup" className="text-link">
           Sign Up
         </Link>
       </div>
