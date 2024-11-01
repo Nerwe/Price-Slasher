@@ -31,7 +31,7 @@ const Footer = () => {
           </li>
         </ul>
         <div className="logo-container">
-          <img src="favicon.ico"></img>
+          <img src="/favicon.ico"></img>
         </div>
       </div>
       <div className="footer-text">

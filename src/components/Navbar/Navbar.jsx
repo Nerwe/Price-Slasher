@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img src="favicon.ico" className="logo-ico"></img>
+        <img src="/favicon.ico" className="logo-ico"></img>
         <Link to="/" className="logo-text">
           Price Slasher
         </Link>
