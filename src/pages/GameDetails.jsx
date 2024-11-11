@@ -1,5 +1,5 @@
 import React from 'react'
-import GameData from '../components/GameData/GameData'
+import GameData from '../components/GameData'
 
 const GameDetails = () => {
   return (

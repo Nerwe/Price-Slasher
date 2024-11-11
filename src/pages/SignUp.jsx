@@ -1,7 +1,7 @@
 import React from 'react'
-import SignUpForm from '../components/SignUpForm/SignUpForm'
-import Navbar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer'
+import SignUpForm from '../components/SignUpForm/'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const SignUp = () => {
   return (

@@ -1,5 +1,4 @@
 import React from "react";
-import './Pagination.scss'
 
 const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   const pageNumbers = [];
@@ -23,17 +22,16 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   }
 
   return (
-    <div className="pagination">
+    <div className="flex justify-center items-center gap-2 pb-4">
       {pageNumbers.map((page, index) =>
         page === "..." ? (
-          <span key={index} className="dots">
-            ...
-          </span>
+          <span key={index} className="dots">...</span>
         ) : (
           <button
             key={index}
             onClick={() => {onPageChange(page); window.scrollTo(0, 0);}}
-            className={currentPage === page ? "active" : ""}
+            className={`border border-green-500 rounded-lg px-3 py-1 cursor-pointer text-white transition-all hover:bg-green-500 hover:scale-110
+              ${currentPage === page ? 'border-blue-500 bg-blue-500 hover:bg-blue-500' : ''}`}
           >
             {page}
           </button>

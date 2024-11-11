@@ -1,10 +1,10 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import './App.css'
-import Home from './pages/Home'
-import GameDetails from "./pages/GameDetails";
-import SignUp from "./pages/SignUp";
-import LogIn from "./pages/LogIn";
-import Profile from "./pages/Profile";
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+import GameDetails from './pages/GameDetails';
+import SignUp from './pages/SignUp';
+import LogIn from './pages/LogIn';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
