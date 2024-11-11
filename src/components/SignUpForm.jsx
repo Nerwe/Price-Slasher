@@ -50,7 +50,7 @@ const SignUpForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col md:flex-row gap-5">
           <input
             className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
             type="password"
@@ -68,6 +68,7 @@ const SignUpForm = () => {
             onChange={(e) => setPasswordConfirm(e.target.value)}
           />
         </div>
+
         <button
           className="px-4 py-2 text-orange-500 border border-orange-500 rounded transition-colors hover:bg-orange-500 hover:text-white focus:bg-orange-500 focus:text-white"
           type="submit"

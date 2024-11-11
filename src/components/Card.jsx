@@ -39,7 +39,7 @@ const Card = ({ data }) => {
   const rarity = getCardRarity(data.worth);
 
   return (
-    <div className="flex flex-col w-[30%] min-w-[20%] bg-neutral-900 rounded-lg gap-1 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+    <div className="flex flex-col w-[80%] md:w-[30%] lg:w-[20%] min-w-[20%] bg-neutral-900 rounded-lg gap-1 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
       <img className="w-full object-cover rounded-t-lg" src={data.image} alt={data.title} />
       <div className={`text-left p-1 -mt-1 text-sm ${getRarityColor(rarity)}`}>
         <h3>{rarity}</h3>
