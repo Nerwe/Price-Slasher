@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Submenu = () => {
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false); // Состояние для управления подменю
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const isLoggedIn =
     localStorage.getItem("email") &&
     localStorage.getItem("username") &&
     localStorage.getItem("password");
 
   return (
-    <div className="bg-neutral-800 shadow-lg sticky top-0 z-50">
+    <div className="bg-neutral-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-8">
         <div className="md:hidden flex justify-between items-center h-12">
           <div className="flex items-center">
@@ -129,7 +129,6 @@ const Submenu = () => {
         </div>
       )}
 
-      {/* Меню для десктопа */}
       <div className="hidden md:flex justify-center p-0.5 bg-neutral-800">
         <ul className="flex m-0 p-0 gap-5">
           <li className="mr-4 last:mr-0">
