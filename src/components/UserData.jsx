@@ -20,12 +20,12 @@ const UserData = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="text-gray-200 text-3xl flex flex-col items-center text-center">
+    <div className="flex flex-col bg-slate-300 dark:bg-neutral-800 gap-4 p-12">
+      <div className="text-gray-800 dark:text-gray-200 text-3xl flex flex-col items-center text-center">
         <img src="favicon.ico" alt="Logo" />
         <h1>Profile</h1>
       </div>
-      <div className="flex flex-col">
+      <div className="flex text-gray-800 dark:text-gray-200 flex-col">
         <h2>{username}</h2>
         <h4>@{username}</h4>
       </div>

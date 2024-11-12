@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import useFetch from '../hooks/useFetch'
-import Card from './Card'
+import React, { useEffect, useState } from 'react';
+import useFetch from '../hooks/useFetch';
+import Card from './Card';
 import Pagination from './Pagination';
 import Loading from './Loading';
 import Error from './Error';
@@ -29,12 +29,12 @@ const CardList = () => {
     return now.toLocaleDateString("en-US", options);
   };
 
-  if (loading) return <Loading/>;
-  if (error) return <Error error={error}/>;
+  if (loading) return <Loading />;
+  if (error) return <Error error={error} />;
 
   return (
-    <div className="flex flex-col gap-5 h-auto">
-      <h2 className="mt-2">Available Giveaways - {getCurrentMonthYear()}</h2>
+    <div className="flex flex-col gap-5 h-auto min-h-screen bg-slate-300 dark:bg-neutral-800 text-gray-900 dark:text-gray-100">
+      <h2 className="mt-2 text-2xl text-center">Available Giveaways - {getCurrentMonthYear()}</h2>
       <div className="flex flex-wrap gap-5 justify-center">
         {displayedItems.map((data) => (
           <Card key={data.id} data={data}></Card>
@@ -43,6 +43,6 @@ const CardList = () => {
       <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage}></Pagination>
     </div>
   );
-}
+};
 
-export default CardList
+export default CardList;

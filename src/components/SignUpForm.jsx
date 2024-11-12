@@ -27,15 +27,15 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center bg-neutral-800 rounded p-12 gap-5">
-      <div className="text-gray-200 text-3xl flex flex-col items-center text-center">
+    <div className="flex flex-col justify-center bg-slate-300 dark:bg-neutral-800 rounded p-12 gap-5">
+      <div className="text-gray-800 dark:text-gray-200 text-3xl flex flex-col items-center text-center">
         <img src="favicon.ico" alt="Logo" />
         <h1>Create Account</h1>
       </div>
 
       <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
         <input
-          className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
+          className="p-3 flex-grow border-none rounded bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-white dark:focus:bg-neutral-900 dark:focus:text-white"
           type="text"
           name="username"
           placeholder="Username"
@@ -43,7 +43,7 @@ const SignUpForm = () => {
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
+          className="p-3 flex-grow border-none rounded bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-white dark:focus:bg-neutral-900 dark:focus:text-white"
           type="text"
           name="email"
           placeholder="Email"
@@ -52,7 +52,7 @@ const SignUpForm = () => {
         />
         <div className="flex flex-col md:flex-row gap-5">
           <input
-            className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
+            className="p-3 flex-grow border-none rounded bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-white dark:focus:bg-neutral-900 dark:focus:text-white"
             type="password"
             name="password"
             placeholder="Password"
@@ -60,7 +60,7 @@ const SignUpForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <input
-            className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
+            className="p-3 flex-grow border-none rounded bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-white dark:focus:bg-neutral-900 dark:focus:text-white"
             type="password"
             name="passwordConfirm"
             placeholder="Confirm Password"

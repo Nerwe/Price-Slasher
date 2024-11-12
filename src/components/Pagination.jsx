@@ -30,7 +30,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
           <button
             key={index}
             onClick={() => {onPageChange(page); window.scrollTo(0, 0);}}
-            className={`border border-green-500 rounded-lg px-3 py-1 cursor-pointer text-white transition-all hover:bg-green-500 hover:scale-110
+            className={`border border-green-500 rounded-lg px-3 py-1 cursor-pointer dark:text-white transition-all hover:bg-green-500 hover:scale-110
               ${currentPage === page ? 'border-blue-500 bg-blue-500 hover:bg-blue-500' : ''}`}
           >
             {page}

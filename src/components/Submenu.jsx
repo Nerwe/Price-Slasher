@@ -9,7 +9,7 @@ const Submenu = () => {
     localStorage.getItem("password");
 
   return (
-    <div className="bg-neutral-800 shadow-lg">
+    <div className="bg-slate-700 dark:bg-neutral-700 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-8">
         <div className="md:hidden flex justify-between items-center h-12">
           <div className="flex items-center">
@@ -51,7 +51,7 @@ const Submenu = () => {
       </div>
 
       {isSubMenuOpen && (
-        <div className="md:hidden bg-neutral-800">
+        <div className="md:hidden bg-slate-700 dark:bg-neutral-700">
           <ul className="space-y-1 px-2 pt-2 pb-3">
             <li>
               <Link
@@ -129,12 +129,12 @@ const Submenu = () => {
         </div>
       )}
 
-      <div className="hidden md:flex justify-center p-0.5 bg-neutral-800">
+      <div className="hidden md:flex justify-center p-0.5 bg-slate-700 dark:bg-neutral-700">
         <ul className="flex m-0 p-0 gap-5">
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/steam"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               Steam
             </Link>
@@ -142,7 +142,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/epic-games-store"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               Epic Games
             </Link>
@@ -150,7 +150,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/itchio"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               Itch.io
             </Link>
@@ -158,7 +158,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/gog"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               GOG
             </Link>
@@ -166,7 +166,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/xbox-one"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               Xbox One
             </Link>
@@ -174,7 +174,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/ps4"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               PS4
             </Link>
@@ -182,7 +182,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/android"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               Android
             </Link>
@@ -190,7 +190,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/ios"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               IOS
             </Link>
@@ -198,7 +198,7 @@ const Submenu = () => {
           <li className="mr-4 last:mr-0">
             <Link
               to="/giveaways/drm-free"
-              className="text-gray-500 hover:text-white text-lg"
+              className="text-gray-200 dark:text-gray-200 hover:text-white dark:hover:text-white text-md"
             >
               DRM-Free
             </Link>

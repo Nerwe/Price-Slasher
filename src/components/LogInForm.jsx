@@ -25,15 +25,15 @@ const LogInForm = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center bg-neutral-800 rounded p-12 gap-5">
-      <div className="text-gray-200 text-3xl flex flex-col items-center text-center">
-        <img src="favicon.ico" alt="Logo" />
+    <div className="flex flex-col justify-center bg-slate-300 dark:bg-neutral-800 rounded p-12 gap-5">
+      <div className="text-gray-800 dark:text-gray-200 text-3xl flex flex-col items-center text-center">
+        <img src="favicon.ico" alt="Logo" className="mb-4" />
         <h1>Login</h1>
       </div>
 
       <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
         <input
-          className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
+          className="p-3 flex-grow border-none rounded bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-white dark:focus:bg-neutral-900 dark:focus:text-white"
           type="text"
           name="email"
           placeholder="Email"
@@ -41,7 +41,7 @@ const LogInForm = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          className="p-3 flex-grow border-none rounded bg-neutral-700 text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-neutral-900 focus:text-white"
+          className="p-3 flex-grow border-none rounded bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-500 transition-transform text-sm focus:scale-105 focus:bg-white dark:focus:bg-neutral-900 dark:focus:text-white"
           type="password"
           name="password"
           placeholder="Password"
@@ -56,7 +56,7 @@ const LogInForm = () => {
         </button>
         {error && <p className="text-red-500">{error}</p>}
       </form>
-      <div className="text-sm">
+      <div className="text-sm text-center">
         <span className="text-gray-500">Don't have an account? </span>
         <Link
           to="/signup"

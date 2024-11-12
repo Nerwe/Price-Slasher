@@ -10,7 +10,7 @@ const GameData = () => {
   const { id } = useParams();
 
   if (isNaN(id)) {
-    return <h2>Invalid ID format. Please use a numeric ID.</h2>;
+    return <h2 className="text-center text-red-500">Invalid ID format. Please use a numeric ID.</h2>;
   }
 
   const { data, loading, error } = useFetch(`https://gamerpower.p.rapidapi.com/api/giveaway?id=${id}`);
@@ -19,10 +19,10 @@ const GameData = () => {
   if (error) return <Error error={error}/>;
 
   return (
-    <div className="min-h-screen bg-neutral-700 flex flex-col">
+    <div className="min-h-screen bg-slate-300 dark:bg-neutral-800 text-gray-900 dark:text-gray-100 flex flex-col">
       <Navbar />
       <div className="flex-grow container mx-auto px-4 py-8">
-        <div className="bg-neutral-800 rounded-lg shadow-xl overflow-hidden">
+        <div className="bg-gray-100 dark:bg-neutral-800 rounded-lg shadow-xl overflow-hidden">
           <div className="relative h-96">
             <img 
               className="w-full h-full object-cover" 
@@ -47,31 +47,31 @@ const GameData = () => {
           <div className="p-6">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-2">
-                <h2 className="text-2xl font-bold text-white mb-4">About this giveaway</h2>
-                <p className="text-gray-200 leading-relaxed mb-6">{data.description}</p>
+                <h2 className="text-2xl font-bold mb-4">About this giveaway</h2>
+                <p className="text-gray-700 dark:text-gray-200 leading-relaxed mb-6">{data.description}</p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-neutral-700 p-4 rounded-lg">
-                    <h3 className="text-gray-300 text-sm mb-1">Worth</h3>
-                    <p className="text-white font-semibold">{data.worth}</p>
+                  <div className="bg-gray-200 dark:bg-neutral-700 p-4 rounded-lg">
+                    <h3 className="text-gray-600 dark:text-gray-300 text-sm mb-1">Worth</h3>
+                    <p className="text-gray-900 dark:text-white font-semibold">{data.worth}</p>
                   </div>
-                  <div className="bg-neutral-700 p-4 rounded-lg">
-                    <h3 className="text-gray-300 text-sm mb-1">Type</h3>
-                    <p className="text-white font-semibold">{data.type}</p>
+                  <div className="bg-gray-200 dark:bg-neutral-700 p-4 rounded-lg">
+                    <h3 className="text-gray-600 dark:text-gray-300 text-sm mb-1">Type</h3>
+                    <p className="text-gray-900 dark:text-white font-semibold">{data.type}</p>
                   </div>
-                  <div className="bg-neutral-700 p-4 rounded-lg">
-                    <h3 className="text-gray-300 text-sm mb-1">Status</h3>
-                    <p className="text-white font-semibold">{data.status}</p>
+                  <div className="bg-gray-200 dark:bg-neutral-700 p-4 rounded-lg">
+                    <h3 className="text-gray-600 dark:text-gray-300 text-sm mb-1">Status</h3>
+                    <p className="text-gray-900 dark:text-white font-semibold">{data.status}</p>
                   </div>
-                  <div className="bg-neutral-700 p-4 rounded-lg">
-                    <h3 className="text-gray-300 text-sm mb-1">Users</h3>
-                    <p className="text-white font-semibold">{data.users}+ claimed</p>
+                  <div className="bg-gray-200 dark:bg-neutral-700 p-4 rounded-lg">
+                    <h3 className="text-gray-600 dark:text-gray-300 text-sm mb-1">Users</h3>
+                    <p className="text-gray-900 dark:text-white font-semibold">{data.users}+ claimed</p>
                   </div>
                 </div>
 
-                <div className="bg-neutral-700 p-4 rounded-lg mb-6">
-                  <h3 className="text-white font-semibold mb-2">Instructions</h3>
-                  <p className="text-gray-200">{data.instructions}</p>
+                <div className="bg-gray-200 dark:bg-neutral-700 p-4 rounded-lg mb-6">
+                  <h3 className="font-semibold mb-2">Instructions</h3>
+                  <p className="text-gray-700 dark:text-gray-200">{data.instructions}</p>
                 </div>
               </div>
               
@@ -93,7 +93,7 @@ const GameData = () => {
                   </button>
                   
                   {data.published_date && (
-                    <div className="text-center text-gray-300 text-sm">
+                    <div className="text-center text-gray-600 dark:text-gray-300 text-sm">
                       Published: {new Date(data.published_date).toLocaleDateString()}
                     </div>
                   )}
