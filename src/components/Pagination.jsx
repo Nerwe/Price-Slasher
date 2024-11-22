@@ -22,7 +22,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   }
 
   return (
-    <div className="flex justify-center items-center gap-2 pb-4">
+    <div className="flex justify-center flex-wrap items-center gap-2 pb-4">
       {pageNumbers.map((page, index) =>
         page === "..." ? (
           <span key={index} className="dots">...</span>
